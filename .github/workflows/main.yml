@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: build
-      run: build-app.ps1
+      run: ./build-app.ps1
     - name: upload
       uses: actions/upload-artifact@master
       with:
