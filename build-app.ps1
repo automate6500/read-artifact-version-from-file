@@ -1,2 +1,3 @@
-$file = "app-" + $Env:VERSION + ".exe"
-echo $file | Out-File $file
+$version = Get-Content ./version.txt -Raw 
+$file = "app-" + $version + ".exe"
+echo $version | Out-File ./output/$file
