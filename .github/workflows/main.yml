@@ -2,8 +2,6 @@ name: Main
 on: [push]
 jobs:
   windows-msvc:
-    env:
-      VERSION: 1.3.45
     name: Windows with VC++
     runs-on: windows-latest
     steps:
@@ -13,5 +11,5 @@ jobs:
     - name: upload
       uses: actions/upload-artifact@master
       with:
-        name: app-${{ env.VERSION }}.exe
-        path: app-${{ env.VERSION }}.exe
+        name: app
+        path: ./output
