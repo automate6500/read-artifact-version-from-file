@@ -1,4 +1,4 @@
 $version = Get-Content ./version.txt -Raw 
-$version = $verion.trim("`r`n")
+$version = $version -replace "`n|`r",""
 $file = "app-" + $version + ".exe"
 echo $version | Out-File ./output/$file
