@@ -3,4 +3,4 @@ $version = $version -replace "`n|`r",""
 $file = "app-" + $version + ".exe"
 echo $version | Out-File $file
 
-$Env:VERSION = $version
+echo "::set-env name=VERSION::$version"
