@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@master
     - name: build
       run: ./build-app.ps1
-    - name: upload
+    - name: upload app version ${{ env.VERSION }}
       uses: actions/upload-artifact@master
       with:
         name: app version ${{ env.VERSION }}
